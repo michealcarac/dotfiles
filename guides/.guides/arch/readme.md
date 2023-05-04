@@ -11,7 +11,7 @@ Sway Installation on ArchLinux
 
 Wayland Installation on ArchLinux
 
-### Xorg Issues
+### XWayland Issues
 
 XWayland is not installed by default on ArchLinux. 
 

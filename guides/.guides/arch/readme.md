@@ -2,6 +2,31 @@
 
 A compilation of various ArchLinux fixes/guides
 
+## Tips n Tricks
+
+### Permissions
+
+Working in the `$HOME` directory should mean you have full access to those files right?
+
+I believe so at least
+
+```bash 
+sudo chown -R $USER $HOME  # Ensure the correct USER is being pulled here
+```
+
+TODO: Add this to the ArchLinux configuration script or something similar to ensure apps like GitKraken work correctly
+
+### Pulling correct $USER
+
+So when you run a program with `sudo`, $USER should switch to `root`. 
+
+To find out what user actually called that program
+
+```bash
+currentuser=$(who | awk 'NR==1{print $1}') # From https://unix.stackexchange.com/a/304761
+```
+
+TODO: Add this to the ArchLinux configuration script instead of asking for username?
 
 ## Sway
 

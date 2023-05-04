@@ -1,8 +1,33 @@
-My dotfiles
+# The dotfiles :tm:
 
-WIP..
+If you gaze into the dotfile, the dotfile gazes also into you.
 
-To install the required fonts:
-> ./.scripts/installFonts.sh
+## Installing
 
-An internet connection is required.
+You will need 'git' and GNU 'stow'
+
+Clone into your '$HOME' directory or '~'
+
+```bash
+git clone https://github.com/michealcarac/dotfiles.git
+```
+
+Run 'stow' to symlink everything or just select what you want
+
+```bash
+stow */ # Everything (the '/' ignores the README)
+```
+
+```bash
+stow zsh # My ZSH config
+```
+
+Install appropriate fonts (Pulls down Awesome Fonts 4 and 6)
+
+```bash
+installFonts.sh
+```
+
+## Programs
+
+All current used programs are listed in the 'programs' directory

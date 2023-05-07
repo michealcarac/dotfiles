@@ -49,10 +49,15 @@ Reboot your system or simply just log out and log back in
 ## Added Scripts
 
 `installFonts.sh`: Install all required system Fonts
+
 `installZsh.sh`: Install zsh, zap, switch from bash to zsh and then stow zsh config from dotfiles 
+
 `installZshPlugins.sh`: Installs zsh plugins to match those configured in .zshrc
+
 `installNetworkManager.sh`: Installs Network Manager along with the GUI, Applet, and sets backend to iwd (iwctl)
+
 `gitcfg.sh`: Configure a global Git Profile
+
 `cleanHome.sh`: Deprecated. Will be removed eventually
 
 Eventually most of these install scripts will be incorporated into one big script when installing the OS

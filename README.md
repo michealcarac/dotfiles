@@ -62,7 +62,7 @@ Eventually most of these install scripts will be incorporated into one big scrip
 * [zsh](https://github.com/zsh-users/zsh): Alternative to BASH
     * [zap](https://github.com/zap-zsh/zap): Zsh Plugin Manager
         * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): Default with Zap, Zsh suggestions
-        * [supercharge](https://github.com/zap-zsh/supercharge):Default with Zap, Adds some nice functionality
+        * [supercharge](https://github.com/zap-zsh/supercharge): Default with Zap, Adds some nice functionality
         * [exa](https://github.com/zap-zsh/exa): Formatting for ls, ls -a, and ls -l 
         * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting): Defualt with Zap, Zsh syntax highlighting
     * [purification](https://github.com/Phantas0s/purification)	
@@ -72,8 +72,8 @@ Eventually most of these install scripts will be incorporated into one big scrip
     * [iwd](https://wiki.archlinux.org/title/Iwd):(iwctl), backend for NetworkManager
 * [alacritty](https://github.com/alacritty/alacritty): Terminal Emulator
 * [sway](https://github.com/swaywm/sway): Tiling Window Manager
-    * [wofi](https://man.archlinux.org/man/wofi.1.en)
-    * [waybar](https://github.com/Alexays/Waybar)
+    * [wofi](https://man.archlinux.org/man/wofi.1.en): Wayland replacement of Dmenu
+    * [waybar](https://github.com/Alexays/Waybar): Top bar 
 
 All current used programs are listed in the `programs` directory
 

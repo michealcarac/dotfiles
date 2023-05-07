@@ -70,7 +70,7 @@ Eventually most of these install scripts will be incorporated into one big scrip
         * [supercharge](https://github.com/zap-zsh/supercharge): Default with Zap, Adds some nice functionality
         * [exa](https://github.com/zap-zsh/exa): Formatting for ls, ls -a, and ls -l 
         * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting): Defualt with Zap, Zsh syntax highlighting
-    * [purification](https://github.com/Phantas0s/purification)	
+    * [purification](https://github.com/Phantas0s/purification): Minimal zsh prompt	
 * [NetworkManager](https://wiki.archlinux.org/title/NetworkManager): Manage Wireless and Wired networks
     * [nm-connection-editor](https://archlinux.org/packages/extra/x86_64/nm-connection-editor/): GUI
     * [network-manager-applet](https://archlinux.org/packages/extra/x86_64/network-manager-applet/): Applet

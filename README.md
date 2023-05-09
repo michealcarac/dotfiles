@@ -103,6 +103,11 @@ Some added backgrounds can be found in `backgrounds`
 
 These backgrounds are used for my personal install, if you do not want to stow them, ensure to fix that in the `sway` config
 
+```bash
+# .config/sway/config
+output * bg {Wallpaper Path} fill # Specify monitor for Dual monitor
+```
+
 ## Conclusion
 
 Work in Progress.

@@ -28,6 +28,24 @@ currentuser=$(who | awk 'NR==1{print $1}') # From https://unix.stackexchange.com
 
 TODO: Add this to the ArchLinux configuration script instead of asking for username?
 
+## NetworkManager
+
+NetworkManager Installation on ArchLinux
+
+## Dispatcher Scripts
+
+NetworkManager has `dispatcher` scripts which run when something occurs in NM
+
+If the user creates one of these scripts ex: `20-my-script`
+
+It must have the proper permissions:
+
+```bash
+sudo chmod u+x,go-w,a-s /etc/NetworkManager/dispatcher.d/20-my-script
+```
+
+The "20" here is the priority. 
+
 ## Sway
 
 Sway Installation on ArchLinux

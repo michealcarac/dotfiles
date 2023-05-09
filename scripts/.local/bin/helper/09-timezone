@@ -1,6 +1,7 @@
 #!/bin/sh
 # https://wiki.archlinux.org/title/System_time
 # Place in /etc/NetworkManager/dispatcher.d/09-timezone
+# Ensure to chmod u+x,go-w,a-s this and other Dispatcher scripts
 
 case "$2" in
     connectivity-change)

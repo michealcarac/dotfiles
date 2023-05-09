@@ -56,11 +56,17 @@ Reboot your system or simply just log out and log back in
 
 `installNetworkManager.sh`: Installs Network Manager along with the GUI, Applet, and sets backend to iwd (iwctl)
 
+`installNetworkManagerTimezone.sh`: Installs Auto timezone into NetworkManager dispatcher
+
 `gitcfg.sh`: Configure a global Git Profile
 
 `cleanHome.sh`: Deprecated. Will be removed eventually
 
-Eventually most of these install scripts will be incorporated into one big script when installing the OS
+`helper`: Folder, contains helper scripts that are to be moved or has extra functionality
+
+Eventually most of these install scripts will be incorporated into one big script when installing the OS.
+
+Currently, these scripts are all very basic, but will be more "secure" once incorporated into a proper install script. 
 
 ## Programs
 

@@ -38,7 +38,7 @@ stow */  # Stow everything (the '/' ignores the README
 
 If there is a `.git` folder, it will be stowed as well. It is recommended to just stow what you want
 
-Install appropriate fonts to `$HOME/.fonts` (Pulls down Awesome Fonts 4 and 6)
+Install appropriate fonts to `$HOME/.fonts` (Pulls down Awesome Fonts 4, 6, and Nerd Fonts)
 
 ```bash
 installFonts.sh
@@ -80,11 +80,14 @@ Currently, these scripts are all very basic, but will be more "secure" once inco
 * [NetworkManager](https://wiki.archlinux.org/title/NetworkManager): Manage Wireless and Wired networks
     * [nm-connection-editor](https://archlinux.org/packages/extra/x86_64/nm-connection-editor/): GUI
     * [network-manager-applet](https://archlinux.org/packages/extra/x86_64/network-manager-applet/): Applet
-    * [iwd](https://wiki.archlinux.org/title/Iwd):(iwctl), backend for NetworkManager
+    * [iwd](https://wiki.archlinux.org/title/Iwd): (iwctl), backend for NetworkManager
 * [alacritty](https://github.com/alacritty/alacritty): Terminal Emulator
 * [sway](https://github.com/swaywm/sway): Tiling Window Manager
     * [wofi](https://man.archlinux.org/man/wofi.1.en): Wayland replacement of Dmenu
-    * [waybar](https://github.com/Alexays/Waybar): Top bar 
+    * [waybar](https://github.com/Alexays/Waybar): Top bar
+    * [brightnessctl](https://archlinux.org/packages/community/x86_64/brightnessctl/): Lightweight brightness control tool 
+* [pulseaudio](https://wiki.archlinux.org/title/PulseAudio): Sound Server
+    * [pactl](https://man.archlinux.org/man/pactl.1.en): Controls PulseAudio
 
 All current used programs are listed in the `programs` directory
 
@@ -93,6 +96,12 @@ All current used programs are listed in the `programs` directory
 `dotfiles/guides` holds various guides on installing to various distros. 
  
 Other notes may be stored in these guides as well.
+
+## Backgrounds
+
+Some added backgrounds can be found in `backgrounds` 
+
+These backgrounds are used for my personal install, if you do not want to stow them, ensure to fix that in the `sway` config
 
 ## Conclusion
 

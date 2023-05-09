@@ -51,8 +51,7 @@ colors:
 #     magenta: "#C678DD"
 #     cyan: "#56B6C2"
 #     white: "#abb2bf"
-
-  # background_opacity: 1.0
+   # background_opacity: 1.0
 
   # Change cursor colors
   cursor:
@@ -93,6 +92,7 @@ font:
     x: 0
     y: 0
 window:
+  opacity: 0.9
   padding:
     x: 2
     y: 2

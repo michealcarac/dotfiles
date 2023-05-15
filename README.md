@@ -82,12 +82,13 @@ Currently, these scripts are all very basic, but will be more "secure" once inco
     * [network-manager-applet](https://archlinux.org/packages/extra/x86_64/network-manager-applet/): Applet
     * [iwd](https://wiki.archlinux.org/title/Iwd): (iwctl), backend for NetworkManager
 * [alacritty](https://github.com/alacritty/alacritty): Terminal Emulator
-* [sway](https://github.com/swaywm/sway): Tiling Window Manager
-    * [wofi](https://man.archlinux.org/man/wofi.1.en): Wayland replacement of Dmenu
-    * [waybar](https://github.com/Alexays/Waybar): Top bar
+* [sway](https://github.com/swaywm/sway): (Wayland) Tiling Window Manager
+    * [wofi](https://man.archlinux.org/man/wofi.1.en): (Wayland) Replacement of Dmenu
+    * [waybar](https://github.com/Alexays/Waybar): (Wayland) Top bar
     * [brightnessctl](https://archlinux.org/packages/community/x86_64/brightnessctl/): Lightweight brightness control tool 
 * [pulseaudio](https://wiki.archlinux.org/title/PulseAudio): Sound Server
     * [pactl](https://man.archlinux.org/man/pactl.1.en): Controls PulseAudio
+* [imv](https://sr.ht/~exec64/imv/): (X11/Wayland) CLI Image Viewer
 
 All current used programs are listed in the `programs` directory
 

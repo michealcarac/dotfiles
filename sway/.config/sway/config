@@ -85,26 +85,6 @@ output * bg $HOME/.backgrounds/cafe.jpg fill
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
-    # User Additions
-
-    # Volume Up
-    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-    
-    # Volume Down
-    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-    
-    # Volume Mute
-    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle 
-
-    # Brightness Down
-    bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-    
-    # Brightness Down
-    bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
-
-    # Search
-    bindsym XF86Search exec $menu
-
 #
 # Moving around:
 #
@@ -239,6 +219,18 @@ bar {
 
 include /etc/sway/config.d/*
 
-# Add Gaps
-gaps inner 10
 
+# User Additions
+
+    # Call Binder script
+    # -> Correctly sets up Audio and Brightness control and binds them to the keys
+    exec_always $HOME/.config/sway/binder.sh
+    
+    # Search
+    bindsym XF86Search exec $menu
+
+    # Add Gaps
+    gaps inner 10
+
+    default_border pixel 5
+    #titlebar_border_thickness 0

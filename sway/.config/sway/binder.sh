@@ -1,7 +1,8 @@
 #! /bin/sh
-# Binds Volume/Screen buttons in Sway
-# This script will bind to installed Audio
-# and Screen control programs. 
+# Binds various buttons in Sway
+# CONTRIBUTIONS ENCOURAGED!!!
+
+# This script will bind:
 
 # Volume Mixer
 # VolumeMute(F1)       -> on/off
@@ -11,6 +12,14 @@
 # Screen Brightness
 # BrightnessDown(F5)   -> -5%
 # BrightnessUp(F6)     -> +5%
+
+# Screenshot
+# Select Region (Super + p)
+# Fullscreen    (Super + o)
+
+
+
+## ----- AUDIO ----- ##
 
 # pactl (PulseAudio)
 if [ -x "$(command -v pactl)" ]
@@ -25,6 +34,8 @@ then
 	BINDER_AUDIOEXISTS=0
 fi
 
+## ----- BRIGHTNESS ----- ##
+
 # brightnessctl (Brightness)
 if [ -x "$(command -v brightnessctl)" ]
 then
@@ -35,6 +46,22 @@ then
 	# Brightness Exists!
 	BINDER_BRIGHTNESSEXISTS=0
 fi
+
+## ----- SCREENSHOT ----- ##
+
+# slurp, grim, wl-copy (Screenshotting)
+if [ -x "$(command -v slurp)" ] && [ -x "$(command -v grim)" ] && [ -x "$(command -v wl-copy)" ]
+then
+        # Grab Super key as same in Sway config
+	mod=Mod4
+	# Region
+        sway bindsym $mod+p exec "slurp | grim -g - - | wl-copy"
+	# Full Screen
+	sway bindsym $mod+o exec "grim - | wl-copy"
+	# Screenshot Exists!
+	BINDER_SCREENSHOTEXISTS=0
+fi
+
 
 # If Audio Controller does not exist, nag the user
 if [ ! "$BINDER_AUDIOEXISTS" = 0 ]
@@ -48,6 +75,11 @@ then
 	swaynag --message="Errors in ~/.config/sway/binder.sh, Ensure your brightness controller is installed and added to this, fix and reload sway"
 fi
 
+# If Screenshot does not exist
+if [ ! "$BINDER_SCREENSHOTEXISTS" = 0 ]
+then
+        swaynag --message="Errors in ~/.config/sway/binder.sh, Ensure the screenshotting is being bound correctly"
+fi
 
 
 

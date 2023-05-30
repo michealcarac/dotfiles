@@ -7,7 +7,7 @@ sudo pacman -S zsh
 zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 
 # Remove newly created config
-sudo rm $HOME/.zshrc 
+sudo rm $HOME/.zshrc* 
 
 # Switch to zsh
 chsh -s /bin/zsh

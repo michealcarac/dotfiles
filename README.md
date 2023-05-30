@@ -21,7 +21,7 @@ zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) 
 Remove the newly created `.zshrc` config file
 
 ```bash
-sudo rm $HOME/.zshrc
+sudo rm $HOME/.zshrc*
 ```
 
 Run `stow` in `$HOME/dotfiles` to symlink zsh config files to `$HOME` 
@@ -46,7 +46,9 @@ installFonts.sh
 
 Reboot your system or simply just log out and log back in
 
-## Added Scripts
+## Scripts
+
+Optional use, but adds some extra configuration.
 
 `installFonts.sh`: Install all required system Fonts
 
@@ -70,6 +72,7 @@ Currently, these scripts are all very basic, but will be more "secure" once inco
 
 ## Programs
 
+### Shell
 * [zsh](https://github.com/zsh-users/zsh): Alternative to BASH
     * [zap](https://github.com/zap-zsh/zap): Zsh Plugin Manager
         * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): Default with Zap, Zsh suggestions
@@ -77,19 +80,42 @@ Currently, these scripts are all very basic, but will be more "secure" once inco
         * [exa](https://github.com/zap-zsh/exa): Formatting for ls, ls -a, and ls -l 
         * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting): Defualt with Zap, Zsh syntax highlighting
     * [purification](https://github.com/Phantas0s/purification): Minimal zsh prompt	
-* [NetworkManager](https://wiki.archlinux.org/title/NetworkManager): Manage Wireless and Wired networks
-    * [nm-connection-editor](https://archlinux.org/packages/extra/x86_64/nm-connection-editor/): GUI
-    * [network-manager-applet](https://archlinux.org/packages/extra/x86_64/network-manager-applet/): Applet
-    * [iwd](https://wiki.archlinux.org/title/Iwd): (iwctl), backend for NetworkManager
+
+### Terminal
 * [alacritty](https://github.com/alacritty/alacritty): Terminal Emulator
-* [sway](https://github.com/swaywm/sway): Tiling Window Manager
-    * [wofi](https://man.archlinux.org/man/wofi.1.en): Wayland replacement of Dmenu
-    * [waybar](https://github.com/Alexays/Waybar): Top bar
+
+### Window Manager
+* [sway](https://github.com/swaywm/sway): (Wayland) Tiling Window Manager
+    * [wofi](https://man.archlinux.org/man/wofi.1.en): (Wayland) Replacement of Dmenu
+    * [waybar](https://github.com/Alexays/Waybar): (Wayland) Top bar
     * [brightnessctl](https://archlinux.org/packages/community/x86_64/brightnessctl/): Lightweight brightness control tool 
+
+### Audio
 * [pulseaudio](https://wiki.archlinux.org/title/PulseAudio): Sound Server
     * [pactl](https://man.archlinux.org/man/pactl.1.en): Controls PulseAudio
 
-All current used programs are listed in the `programs` directory
+### Images
+* [imv](https://sr.ht/~exec64/imv/): (X11/Wayland) CLI Image Viewer
+
+### Screenshotting
+* [grim](https://man.archlinux.org/man/grim.1): (Wayland) Grab images from Wayland Compositor
+    * [slurp](https://man.archlinux.org/man/slurp.1.en): (Wayland) Select region in Wayland Compositor
+    * [wl-clipboard](https://man.archlinux.org/man/wl-copy.1): (Wayland) Copy and Paste CLI for Wayland 
+
+### Networking
+* [NetworkManager](https://wiki.archlinux.org/title/NetworkManager): Manage Wireless and Wired networks
+    * [nmtui](https://man.archlinux.org/man/nmtui.1): Text-based NetworkManager editor
+    * [nm-connection-editor](https://archlinux.org/packages/extra/x86_64/nm-connection-editor/): GUI
+    * [network-manager-applet](https://archlinux.org/packages/extra/x86_64/network-manager-applet/): Applet
+    * [iwd](https://wiki.archlinux.org/title/Iwd): (iwctl), backend for NetworkManager
+
+All of these programs are optional and hopefully all work independently of eachother except for `zsh` and `zap`.
+
+The top level of each tree is the main program, and every lower is optional but advised to use.
+
+For example, `nm-connection-editor` is not required, but it is nice to have alongside `NetworkManager` 
+
+Most of the included scripts also pull in these optional dependencies as I personally like them. Obviously edit as you like.
 
 ## Guides
 

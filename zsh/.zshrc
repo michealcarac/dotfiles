@@ -44,7 +44,7 @@ fi
 
 # Add Purification ZSH Prompt
 fpath=($SHELL_CONFIG $fpath)
-autoload -Uz purification.zsh && purification.zsh
+[[ -f $SHELL_CONFIG/purification.zsh ]] && autoload -Uz purification.zsh && purification.zsh
 
 # Source $SHELL_CONFIG/aliases.zsh if exists
 [[ -f $SHELL_CONFIG/aliases.zsh ]] && source $SHELL_CONFIG/aliases.zsh

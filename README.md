@@ -2,6 +2,10 @@
 
 If you gaze into the dotfile, the dotfile gazes also into you.
 
+My personal Dotfiles for my Archlinux Installs. 
+
+Most of these configs can be stowed on any distro, but not all `scripts` will work due to package manager (pacman) dependencies.
+
 ## Installing
 
 You will need `git`, GNU `stow`, and `zsh`

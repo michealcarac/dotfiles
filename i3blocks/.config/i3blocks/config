@@ -1,0 +1,45 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+[volume]
+command=$(pwd)/volume.sh
+interval=1
+
+# Query Battery Percentage
+[battery]
+command=$(pwd)/battery.sh
+interval=10
+
+# Display Connected BT Devices
+[bt]
+command=echo ": $(bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name\|Connected: yes" | grep -B1 "yes" | head -n 1 | cut -d\  -f2-)"
+interval=10
+color=#495fa6
+
+# Query SSID
+[SSID]
+command=iwgetid -r | awk '{ print "SSID:" $1 }'
+interval=10
+color=#91E78B
+
+# Query my LAN every 30 seconds
+[ip]
+command=hostname -i | awk '{ print "LAN:" $1 }'
+interval=30
+color=#91E78B
+
+# Guess the weather hourly
+[weather]
+command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+interval=3600
+color=#A4C2F4
+
+# Update time every second
+[time]
+command=date +%T
+interval=1

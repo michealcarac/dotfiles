@@ -17,7 +17,7 @@ sudo systemctl start NetworkManager.service
 
 ## Set iwd Backend
 
-# Install iwd 
+# Install iwd
 sudo pacman -S iwd
 
 # Create and edit wifi_backend config file

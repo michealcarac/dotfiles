@@ -13,7 +13,7 @@ read email
 echo "Preferred Editor? (nano, vim, emacs)"
 read editor
 
-echo "Default branch?"
+echo "Default branch? (github is main)"
 read branch
 
 echo "Commands to be ran:"

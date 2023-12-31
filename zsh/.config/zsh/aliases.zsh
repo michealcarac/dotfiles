@@ -1,5 +1,5 @@
 #
-# ~/.aliases
+# ~/.config/zsh/aliases.zsh
 #
 # Contains Aliases for BASH or ZSH
 

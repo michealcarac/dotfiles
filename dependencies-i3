@@ -1,0 +1,17 @@
+i3
+	brightnessctl (brightness)
+	pactl (pipewire)
+	picom (transparency)
+i3blocks
+	network manager (ensure to start NetworkManager.service)
+	inetutils (hostname command)
+	acpi (battery)
+	bluez, bluez-utils,blueman (ensure to start bluetooth.service)
+	spotify, python-dbus (spotify)	
+zsh
+	zap
+	alacritty
+	nano (change .config/zsh/exports.zsh EDITOR if using different one)
+alacritty
+	picom (transparency)
+

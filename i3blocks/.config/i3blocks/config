@@ -5,7 +5,13 @@
 #
 #     https://vivien.github.io/i3blocks
 
+# Spotify Artist + Song
+[spotify]
+command=python $(pwd)/spotify.py
+color=#81b71a
+interval=5
 
+# Query System Volume
 [volume]
 command=$(pwd)/volume.sh
 interval=1
@@ -17,7 +23,7 @@ interval=10
 
 # Display Connected BT Devices
 [bt]
-command=echo ": $(bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name\|Connected: yes" | grep -B1 "yes" | head -n 1 | cut -d\  -f2-)"
+command=bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name\|Connected: yes" | grep -B1 "yes" | head -n 1 | cut -d\  -f2- | awk '{ print ":" $1 }'
 interval=10
 color=#495fa6
 

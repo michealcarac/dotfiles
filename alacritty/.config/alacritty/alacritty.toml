@@ -2,6 +2,9 @@
 # Colors (Kanagawa Wave)
 # Source https//github.com/rebelot/kanagawa.nvim
 
+[window]
+opacity = 0.8
+
 [colors.primary]
 background = '#1f1f28'
 foreground = '#dcd7ba'

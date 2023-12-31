@@ -1,0 +1,9 @@
+Stow me!
+
+This places a config in ~/.config/rofi/config.rasi
+And all themes in ~/.local/share/rofi/themes/*
+
+Configure the config.rasi to pull the theme you want!
+
+Alternatively, you can use rofi-theme-selector which pulls
+from ~/.local/share/rofi/themes, and updates config.rasi

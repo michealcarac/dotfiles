@@ -23,13 +23,13 @@ interval=10
 
 # Display Connected BT Devices
 [bt]
-command=bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name\|Connected: yes" | grep -B1 "yes" | head -n 1 | cut -d\  -f2- | awk '{ print ":" $1 }'
+command=bluetoothctl devices | cut -f2 -d' ' | while read uuid; do bluetoothctl info $uuid; done | grep -e "Name\|Connected: yes" | grep -B1 "yes" | head -n 1 | cut -d\  -f2- | awk '{ print ":" $a }'
 interval=10
 color=#495fa6
 
 # Query SSID
 [SSID]
-command=iwgetid -r | awk '{ print "SSID:" $1 }'
+command=iwgetid -r | awk '{ print "SSID:" $a }'
 interval=10
 color=#91E78B
 

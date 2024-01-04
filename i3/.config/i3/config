@@ -182,6 +182,13 @@ bindsym $mod+r mode "resize"
 
 set $BG "$HOME/.backgrounds/cafe"
 
+# Remove i3 Window Title Bars
+default_border pixel 1
+default_floating_border pixel 1
+
+# i3 Gaps 
+gaps inner 10
+
 # Bluetooth Applet
 exec --no-startup-id blueman-applet
 

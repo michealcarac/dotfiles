@@ -2,6 +2,9 @@
 # Colors (Kanagawa Wave)
 # Source https//github.com/rebelot/kanagawa.nvim
 
+[font]
+size = 7
+
 [window]
 opacity = 0.8
 

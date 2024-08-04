@@ -14,4 +14,6 @@ zsh
 	nano (change .config/zsh/exports.zsh EDITOR if using different one)
 alacritty
 	picom (transparency)
-
+nemo
+	samba
+	gvfs-smb

@@ -11,6 +11,10 @@ command=python $(pwd)/spotify.py
 color=#81b71a
 interval=5
 
+[memory]
+command=free -h | awk 'NR==2{print "MEM:"$3"/"$2}'
+color=#7d41b5
+interval=5
 # Query System Volume
 [volume]
 command=$(pwd)/volume.sh

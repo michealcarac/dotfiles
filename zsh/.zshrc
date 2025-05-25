@@ -2,24 +2,15 @@
 # .zshrc
 #
 
-# Created by Zap installer
-
-[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
-plug "zsh-users/zsh-autosuggestions"
-plug "zap-zsh/supercharge"
-plug "zap-zsh/exa"
-# plug "zap-zsh/zap-prompt"
-plug "zsh-users/zsh-syntax-highlighting"
-
 # ----------------------------------
 
 # SYSTEM ADDITIONS
 
 # The following lines were added by compinstall
-zstyle :compinstall filename '~/.zshrc'
+#zstyle :compinstall filename '~/.zshrc'
 
-autoload -Uz compinit
-compinit
+#autoload -Uz compinit
+#compinit
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -42,14 +33,27 @@ if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 	exec sway
 fi
 
-# Add Purification ZSH Prompt
 fpath=($SHELL_CONFIG $fpath)
-[[ -f $SHELL_CONFIG/purification.zsh ]] && autoload -Uz purification.zsh && purification.zsh
+
+# Add Purification ZSH Prompt
+#[[ -f $SHELL_CONFIG/purification.zsh ]] && autoload -Uz purification.zsh && purification.zsh
 
 # Source $SHELL_CONFIG/aliases.zsh if exists
 [[ -f $SHELL_CONFIG/aliases.zsh ]] && source $SHELL_CONFIG/aliases.zsh
 
 # Source $SHELL_CONFIG/envs.zsh if exists
 [[ -f $SHELL_CONFIG/exports.zsh ]] && source $SHELL_CONFIG/exports.zsh
+
+# Use powerlevel10k if available
+# Firstly load personal config, feel free to comment personal one out if you want to create a new theme
+[[ -f $SHELL_CONFIG/p10k_pure.zsh ]] && source $SHELL_CONFIG/p10k_pure.zsh
+[[ -f $SHELL_CONFIG/powerlevel10k/powerlevel10k.zsh-theme ]] && source $SHELL_CONFIG/powerlevel10k/powerlevel10k.zsh-theme
+
+# Use zsh autosuggestions if available 
+[[ -f $SHELL_CONFIG/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source $SHELL_CONFIG/zsh-autosuggestions/zsh-autosuggestions.zsh 
+
+# Use zsh syntax-highlighting if available (Must be at end of .zshrc)
+[[ -f $SHELL_CONFIG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source $SHELL_CONFIG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 # END USER ADDITIONS

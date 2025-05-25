@@ -36,7 +36,7 @@ fi
 fpath=($SHELL_CONFIG $fpath)
 
 # Add Purification ZSH Prompt
-#[[ -f $SHELL_CONFIG/purification.zsh ]] && autoload -Uz purification.zsh && purification.zsh
+[[ -f $SHELL_CONFIG/purification.zsh ]] && autoload -Uz purification.zsh && purification.zsh
 
 # Source $SHELL_CONFIG/aliases.zsh if exists
 [[ -f $SHELL_CONFIG/aliases.zsh ]] && source $SHELL_CONFIG/aliases.zsh
@@ -46,8 +46,8 @@ fpath=($SHELL_CONFIG $fpath)
 
 # Use powerlevel10k if available
 # Firstly load personal config, feel free to comment personal one out if you want to create a new theme
-[[ -f $SHELL_CONFIG/p10k_pure.zsh ]] && source $SHELL_CONFIG/p10k_pure.zsh
-[[ -f $SHELL_CONFIG/powerlevel10k/powerlevel10k.zsh-theme ]] && source $SHELL_CONFIG/powerlevel10k/powerlevel10k.zsh-theme
+#[[ -f $SHELL_CONFIG/p10k_pure.zsh ]] && source $SHELL_CONFIG/p10k_pure.zsh
+#[[ -f $SHELL_CONFIG/powerlevel10k/powerlevel10k.zsh-theme ]] && source $SHELL_CONFIG/powerlevel10k/powerlevel10k.zsh-theme
 
 # Use zsh autosuggestions if available 
 [[ -f $SHELL_CONFIG/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source $SHELL_CONFIG/zsh-autosuggestions/zsh-autosuggestions.zsh 

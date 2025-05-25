@@ -4,7 +4,7 @@
 # Contains Aliases for BASH or ZSH
 
 # Establish Alias
-#alias ls='ls --color=auto'
+alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias dow='cd ~/Downloads'
 alias doc='cd ~/Documents'

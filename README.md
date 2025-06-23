@@ -1,8 +1,6 @@
 # The dotfiles :tm:
 
-If you gaze into the dotfile, the dotfile gazes also into you.
-
-My personal Dotfiles for my Archlinux Installs. 
+My personal Dotfiles for my linux Installs. 
 
 Most of these configs can be stowed on any distro, but not all `scripts` will work due to package manager (pacman) dependencies.
 
@@ -16,7 +14,13 @@ Clone `dotfiles` into your `$HOME` directory or `~`
 git clone https://github.com/michealcarac/dotfiles.git
 ```
 
-Now I use `stow` to only pull what I want as I do not use every tool.
+Update any submodules
+
+```bash
+git submodule update --init --recursive
+```
+
+I use `stow` to only pull what I want as I do not use every tool.
 
 Knowing this, my configurations are all self contained (hopefully)
 
@@ -33,20 +37,6 @@ Which will set up the configuration in your `$HOME` directory.
 Each program installation will be described below and the best practice to pull them in.
 
 ## Zsh
-
-Uses zap for plugin control
-
-Download `zap`
-
-```bash
-zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
-```
-
-Remove the newly created `.zshrc` config file
-
-```bash
-sudo rm $HOME/.zshrc*
-```
 
 Stow zsh from Dotfiles repo
 
